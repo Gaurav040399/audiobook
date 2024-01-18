@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #1E1E1E;
+    
+}
+body{
+    color : #FFFFFF
+}
+
+.top{
+    display: grid;
+    grid-template-columns: repeat(2,70% 30%);
+    /* border: 2px solid red; */
+    padding: 5px 15px;
+    margin-top: 30px;
+}
+
+
+.rightDiv{
+    display: flex;
+    /* border: 2px solid yellow; */
+    justify-content: right;
+}
+
+.top div img{
+    width: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background-color: green;
+}
+
+.nameGradient{
+    background: linear-gradient(to left , rgb(61, 61, 224),rgb(82, 51, 65));
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
+}
+
+.ad{
+    margin: 10px auto;
+    /* border: 2px solid yellow; */
+    padding: 15px 10px;
+    border-radius: 5px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    background: #343436;
+}
+.ad p {
+    background: #343436;
+}
+
+.btn{
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.comunityBtn{
+    background-color: #23AB5C;
+    color: #FFFFFF;
+}
+
+#courses, #articles{
+    height: 200px;
+    overflow-x: auto;
+    display: flex;
+    margin: 10px ;    
+}
+
+.courses, .articles{
+    margin: 10px ; 
+}
+.card{
+    margin:5px 10px;
+    padding: 5px 10px;
+    width: 200px;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+}
+.card div {
+    width: 100%;
+    overflow: hidden;
+}
+
+.card div img{
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+} 
+
+.card h3{
+    display: block;
+
+}
