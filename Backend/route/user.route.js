@@ -1,11 +1,12 @@
+// Importing All modules in commonJS way
 const express = require("express")
 const userRoute = express.Router()
 const {User} = require("../model/user.model");
 const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
 
-// userRoute.use(express.json())
 
+// Creating new user and save in the database (Route : /register)
 userRoute.post("/register",async(req,res)=>{
     try {
         const {name,email,password} = req.body;
@@ -19,13 +20,13 @@ userRoute.post("/register",async(req,res)=>{
         const hashPassword = await bcrypt.hash(password,4);
         const newUser = new User({name,email,password:hashPassword})
         await newUser.save();
-        res.status(201).json({msg:"Registration successful",isOk:true})
+        res.status(201).json({message:"Registration successful",isOk:true})
     } catch (error) {
         res.status(400).json({error:error.message,message:"Registration failed",isOk:false})
     }
     })
 
-
+// Allow existing user to login and access the product. (Route : /login)
 userRoute.post("/login",async(req,res)=>{
     try {
         const {email,password} = req.body;
@@ -50,6 +51,5 @@ userRoute.post("/login",async(req,res)=>{
     }
 })
 
-module.exports = {
-    userRoute
-}
+module.exports = { userRoute } // Exporting userRoute module
+

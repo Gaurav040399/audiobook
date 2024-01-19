@@ -1,8 +1,11 @@
 const express = require("express");
 const { Course } = require("../model/course.model");
+const { authenticateUser } = require("../middleware/auth");
 const courseRouter = express.Router();
 
-courseRouter.post("/new-course",async(req,res)=>{
+
+// Adding new course to the database. (Route: /new-course)
+courseRouter.post("/new-course",authenticateUser,async(req,res)=>{
     try {
         const {title,description,coverImage,length,content} = req.body
 
@@ -19,7 +22,8 @@ courseRouter.post("/new-course",async(req,res)=>{
     }
 })
 
-courseRouter.patch("/update/:courseId",async(req,res)=>{
+// Update or modify the existing document.  (Route : /update/:courseId)
+courseRouter.patch("/update/:courseId",authenticateUser,async(req,res)=>{
     try {
         const {courseId} = req.params;
 
@@ -30,7 +34,8 @@ courseRouter.patch("/update/:courseId",async(req,res)=>{
     }
 })
 
-courseRouter.delete("/delete/:courseId",async(req,res)=>{
+// Delete the existing Document. (Route : /delete/:courseId)
+courseRouter.delete("/delete/:courseId",authenticateUser, async(req,res)=>{
     try {
         const {courseId} = req.params;
 
@@ -41,7 +46,7 @@ courseRouter.delete("/delete/:courseId",async(req,res)=>{
     }
 })
 
-
+// Retrive all document or course present in the collenction.  (Route: /data)
 courseRouter.get("/data",async(req,res)=>{
     try {
         let allCourses = await Course.find();
@@ -52,4 +57,4 @@ courseRouter.get("/data",async(req,res)=>{
 })
 
 
-module.exports = {courseRouter}
+module.exports = {courseRouter}  // Export courseRouter module

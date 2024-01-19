@@ -1,9 +1,10 @@
 const express = require("express");
 const audioBookRouter = express.Router();
 const {AudioBook} = require("../model/audioBook.model");
+const { authenticateUser } = require("../middleware/auth");
 
-
-audioBookRouter.post("/new-data",async(req,res)=>{
+// Adding new audiobook to the database. (Route: /new-data)
+audioBookRouter.post("/new-data",authenticateUser, async(req,res)=>{
     try {
         const {title,author,narrator,length,categories,summary,coverImage,audioFileUrl} = req.body;
 
@@ -17,6 +18,7 @@ audioBookRouter.post("/new-data",async(req,res)=>{
     }
 })
 
+// Retrive all document or audiobook present in the collenction.  (Route: /data)
 audioBookRouter.get("/data",async(req,res)=>{
     try {
         let allAudioBooks = await AudioBook.find();
@@ -26,7 +28,8 @@ audioBookRouter.get("/data",async(req,res)=>{
     }
 })
 
-audioBookRouter.patch("/update/:bookId",async(req,res)=>{
+// Update or modify the existing document.  (Route : /update/:bookId)
+audioBookRouter.patch("/update/:bookId",authenticateUser, async(req,res)=>{
     try {
         const {bookId} = req.params;
 
@@ -37,7 +40,8 @@ audioBookRouter.patch("/update/:bookId",async(req,res)=>{
     }
 })
 
-audioBookRouter.delete("/delete/:bookId",async(req,res)=>{
+// Delete the existing Document. (Route : /delete/:bookId)
+audioBookRouter.delete("/delete/:bookId",authenticateUser, async(req,res)=>{
     try {
         const {bookId} = req.params;
 
@@ -50,4 +54,4 @@ audioBookRouter.delete("/delete/:bookId",async(req,res)=>{
 
 
 
-module.exports = {audioBookRouter}
+module.exports = {audioBookRouter} // Export audioRouter module

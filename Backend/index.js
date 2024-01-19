@@ -7,7 +7,7 @@ const { userRoute } = require("./route/user.route");
 const { audioBookRouter } = require("./route/audioBook.route");
 const { courseRouter } = require("./route/course.route");
 
-// Declaring port 
+// Declaring port. if port is not present in env file then it will run on 3000 port
 const PORT = process.env.PORT || 3000 ;
 
 
@@ -22,11 +22,12 @@ app.get("/",(req,res)=>{
     res.send("home route");
 })
 
+// Using app.use inbuilt method for sending the request for perticular route base on the url
 app.use("/user",userRoute);
 app.use("/audiobook",audioBookRouter);
 app.use("/course",courseRouter)
 
-
+// Server running on PORT and connected to database
 app.listen(PORT , async()=>{
     try {
         await connection;
