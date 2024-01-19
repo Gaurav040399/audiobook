@@ -59,3 +59,5 @@ The frontend provides the following functionalities:
 
 
 Feel free to customize and build upon this project to suit your requirements.
+
+Hint => Many more functionality are working in progress...
