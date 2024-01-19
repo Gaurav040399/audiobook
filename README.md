@@ -53,8 +53,7 @@ The frontend provides the following functionalities:
 2. Implement the frontend to interact with the backend API endpoints.
 
 ## Screenshots
-![Home Page](/Images/HomePage.png)
-![Signup Page](/Images/signupPage.png)
-![Login Page](/Images/loginPage.png)
+![Signup Page](/Images/signupPage.png) , ![Login Page](/Images/loginPage.png), ![Home Page](/Images/HomePage.png)
+
 
 Feel free to customize and build upon this project to suit your requirements.
