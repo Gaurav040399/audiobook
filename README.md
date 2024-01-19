@@ -3,6 +3,10 @@
 This repository contains the backend and frontend code for a Audiobook application. 
 The backend provides functionalities for user authentication, Adding, Updating, Deleting, retrieving, and redirection for All courses and audiobook.
 
+### Deployed Link
+ [Backend](https://audiobook-19h7.onrender.com/) 
+ [Frontend](https://audiobookapp.netlify.app/)
+ 
 ## Backend Functionality
 
 ### Initialization
