@@ -1,0 +1,226 @@
+{
+	"info": {
+		"_postman_id": "6a8baaf9-2207-4acf-a4c7-b193ef032e17",
+		"name": "Hyperface",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25322702"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9090/user/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Gaurav Asode\",\r\n    \"email\": \"g@123\",\r\n    \"password\": \"gg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/user/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"g@123\",\r\n    \"password\": \"gg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/audiobook/new-data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"title\" : \"CD/CI\",\r\n    \"author\" : \"Sagar Asode\",\r\n    \"narrator\" : \"Rahul Asode\",\r\n    \"length\" : \"00 hours 30 min\",\r\n    \"categories\" : \"IT\",\r\n    \"summary\" : \"Detailed knowled of CD/CI\",\r\n    \"coverImage\" : \"https://file-examples.com/storage/fe5048eb7365a64ba96daa9/2017/10/file_example_JPG_100kB.jpg\",\r\n    \"audioFileUrl\" : \"https://file-examples.com/storage/fe5048eb7365a64ba96daa9/2017/11/file_example_MP3_700KB.mp3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/audiobook/new-data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"audiobook",
+						"new-data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/audiobook/data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/audiobook/data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"audiobook",
+						"data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/course/new-course",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"title\" : \"Web Development\",\r\n    \"description\" : \"All Web development Audiobook\",\r\n    \"length\" : \"2 hours 00 min\",\r\n    \"coverImage\" : \"https://file-examples.com/storage/fe5048eb7365a64ba96daa9/2017/10/file_example_JPG_100kB.jpg\",\r\n    \"content\" : [\"65a9291dd652c1dc55d56809\",\"65a92671037c27f1741c6640\",\"65a92fa0d11e1c1204c60447\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/course/new-course",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"course",
+						"new-course"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/course/data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/course/data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"course",
+						"data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/course/update/65a92fc1d11e1c1204c6044a",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"title\" : \"DeOps Data\",\r\n    \"description\" : \"All DevOps Audiobook\",\r\n    \"length\" : \"3 hours 00 min\",\r\n    \"coverImage\" : \"https://file-examples.com/storage/fe5048eb7365a64ba96daa9/2017/10/file_example_JPG_100kB.jpg\",\r\n    \"content\" : [\"65a9291dd652c1dc55d56809\",\"65a92671037c27f1741c6640\",\"65a92fa0d11e1c1204c60447\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/course/update/65a92fc1d11e1c1204c6044a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"course",
+						"update",
+						"65a92fc1d11e1c1204c6044a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/course/delete/65a92edeb91f8836ba465e01",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"title\" : \"DeOps Data\",\r\n    \"description\" : \"All DevOps Audiobook\",\r\n    \"length\" : \"3 hours 00 min\",\r\n    \"coverImage\" : \"https://file-examples.com/storage/fe5048eb7365a64ba96daa9/2017/10/file_example_JPG_100kB.jpg\",\r\n    \"content\" : [\"65a9291dd652c1dc55d56809\",\"65a92671037c27f1741c6640\",\"65a92fa0d11e1c1204c60447\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/course/delete/65a92edeb91f8836ba465e01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"course",
+						"delete",
+						"65a92edeb91f8836ba465e01"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

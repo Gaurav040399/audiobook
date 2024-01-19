@@ -52,4 +52,7 @@ The frontend provides the following functionalities:
 1. Start the backend server using `node index.js`.
 2. Implement the frontend to interact with the backend API endpoints.
 
+[Postman Collection](./Hyperface.postman_collection.json)
+
+
 Feel free to customize and build upon this project to suit your requirements.
