@@ -1,7 +1,7 @@
 let courses = document.getElementById("courses");
 let article = document.getElementById("article");
 
-let url = "http://localhost:9090/";
+let url = "https://audiobook-19h7.onrender.com/";
 
 async function getCourseData(url) {
     let res = await fetch(`${url}course/data`);
